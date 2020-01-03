@@ -66,9 +66,36 @@ Space efficiency        No              Yes
 Time efficient          No              Yes
 Ease of code           Yes              No
 
-When to use
+When to use :
+can breakdown in sub problems
+there's always extra overhead (time + space)
+DO NOT USE EMBEDDED SYSTEMS
+(since fraction of second counts)
+Quick working solution instead of efficient
 
+Data structure uses recursion :
+    - Stack
+    - Tree
+    - Sorting
+    - Divide and conquer
+    - Dynamic programming
+-----------------------------------------------------------------
 
+Algorithm Runtime Analysis
+---------------------------
+- Study of run time of a given algorithm
+- to measure efficiency of a given algorithm
+
+Notations:
+Algorithm Run Time Analysis
+
+O(1)            Constant        Adding element in front of linked list
+O(log n)        Logarithmic     Finding element in sorted array
+O(n)            Linear          Finding element in unsorted array
+O(n log n)      Linear Log      Merge sort
+O(n^2)          Quadratic
+O(n^3)          Cubic
+O(2^n)          Exponential
 
 
 
