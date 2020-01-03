@@ -1,0 +1,116 @@
+Course Breakdown:
+
+                                        Data structure & Algorithm
+                                                    |
+   -------------------------------------------------------------------------------------
+    |                               |                |                  |            |
+  Basics                        Physical DS        Logical DS       Miscellaneous   Algo Techniques
+  - Introduction                - Array            - Tree           - Sorting       - Magic Framework
+  - Recursion                   - LinkedList       - Hashing        - Searching     - Greedy Algorithm
+  - Algo Run Time Analysis                         - Stack                          - Divide and Conquer
+                                                   - Queue                          - Dynamic Programming
+                                                   - Graph
+
+Types of Data Structure :
+---------------------------
+Primitive and Non Primitive Data Structure
+
+        Primitive               Non        Primitive
+    Int Float Char Bool      Physical             Logical (can only be implemented using physical)
+                        Array   Linked List |    Stack  Queue Tree Graph
+
+Recursion
+-------------
+- Same operation performed multiple times with diff inputs
+- Needs a base condition
+- Ex: traversing binary tree
+- Why use ?
+    - makes code easy to write
+    - because it is heavily used in Tree, Graphs
+    - heavily used in divide and conquer, greedy and dynamic
+
+Format of Recursion     Recursive case
+--------------------       Base case
+
+* How Recursion works internally:
+--------------------------------
+- Iterative methods and stack
+
+Main()                        Stack(LIFO)     Console
+    Bar()                     ----------
+    Sout("I am main")         ----------
+Bar()                         ----------
+    DoWork()                  ----------
+    Sout("I am a bar")        ----------
+DoWork()                       doWork()
+    DoMore()                    bar()
+    Sout("I am do work")        Main()
+DoMore()
+    Sout("I am do more")
+
+
+- Iterative methods and stack
+
+foo(n)                        Stack(LIFO)     Console
+    if (n< 1)                 ----------
+       return                 ----------
+    else                        Foo(1)
+       foo(n-1)                 Foo(2)
+    print "Hello world"         Foo(3)
+main()                          Main()
+    foo(3)
+
+- Recursion vs Iteration
+                    Recursion       Iteration
+Space efficiency        No              Yes
+Time efficient          No              Yes
+Ease of code           Yes              No
+
+When to use
+
+
+
+
+
+
+
+
+What is a tree ?
+-------------------
+A hierarchical form
+
+Parent has bunch of nodes
+
+Disjointed binary tree has left subtree & right subtree
+
+Why learn tree ?
+
+Terminologies :
+---------------
+Depth of node - length of path root -> node
+Height of node - length node -> deepest node
+Height of tree - length of root -> deepest node
+
+Binary Tree :
+--------------
+If each node has zero, one or two child.
+Family of data structures like
+BST, Heap tree, AVL, Red-Black, Syntax Tree, Huffman
+
+    Strict Binary Tree : Each node has two or none children
+
+    Full Binary Tree : Each non-leaf nodes have exactly 2 children
+    and all the leaf nodes are at the same level
+
+    Complete Binary Tree : All levels completely filled
+    except the last level
+
+Two ways to implement : LinkedList & Array (2x & 2x+1)
+
+Common operation : creation, insertion, deletion, traversal.
+
+Pre Order - Root -> Left Subtree -> Right Subtree
+In Order - Left subtree -> Root -> Right subtree
+Post Order - Left subtree -> Right subtree -> Root
+
+Level order - Traverse by each level

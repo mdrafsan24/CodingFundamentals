@@ -1,0 +1,45 @@
+Java Syntax
+
+Array :
+
+- Creating new HashMap : Reason for using Map is we can later change implementation!
+
+                Map <String,  boolean> map = new HashMap();
+
+- Creating new Array:
+
+                int[] myIntArray = new int[3];
+                int[] myIntArray = {1, 2, 3};
+
+To return array without creating :
+
+                return new int[]{1, 2, 3};
+
+Two Dimension :
+
+                int[][] num = new int[5][2];
+                return new int[]{ {1,2}, {1,2}, {1,2}, {1,2}, {1,2} };
+
+ArrayList (CAN'T HOLD PRIMITIVE)
+
+                List<Integer[]> triplets = new ArrayList<Integer[]>();
+
+Arrays can also hold objects like primitive :
+
+                Integer[] newTriplet = {1, 2, 3};
+
+MAX AND MIN :           Integer.MAX_VALUE;
+                        Integer.MIN_VALUE;
+
+Arrays.sort - sort in ascending order
+
+Important Math class methods :
+        abs(x)
+        log(x)	(natural log)
+        max(x, y) (return number with highest value )
+        min(x, y) (return number with lowest value)
+        pow(x, y) x ^ y
+        random() ( (Math.random() * ((max - min) + 1)) + min)
+        round(x) - rounds to the nearest integer
+        floor(x) - rounds down
+        ceil(x)  - rounds up
