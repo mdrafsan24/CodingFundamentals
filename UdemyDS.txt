@@ -16,8 +16,8 @@ Types of Data Structure :
 Primitive and Non Primitive Data Structure
 
         Primitive               Non        Primitive
-    Int Float Char Bool      Physical             Logical (can only be implemented using physical)
-                        Array   Linked List |    Stack  Queue Tree Graph
+    Int Float Char Bool    Physical(Linear)             Logical (can only be implemented using physical)
+                        Array   Linked List |              Stack  Queue Tree Graph
 
 Recursion
 -------------
@@ -79,7 +79,7 @@ Data structure uses recursion :
     - Sorting
     - Divide and conquer
     - Dynamic programming
------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Algorithm Runtime Analysis
 ---------------------------
@@ -96,6 +96,116 @@ O(n log n)      Linear Log      Merge sort
 O(n^2)          Quadratic
 O(n^3)          Cubic
 O(2^n)          Exponential
+
+How to calculate Algorithm Time Complexity ?
+using common sense
+
+-------------------------------------------------------------------------------
+Array:
+--------
+- Can store data of specific data type
+- Contiguous memory location
+- Every cell in array has an unique index
+- starts at 0
+- *** size must be specified and can not be modified
+
+Two types : One dimension and multi dimension (2d array)
+-----------
+Two dimension [row][column] (always count from 0)
+--------------
+
+How array is represented in memory :
+-------------------------------------
+- 1D Array : When we declare array, compiler allocated n Contiguous
+cells in RAM
+
+- 2D Array : same manner as 1D
+
+- Common Operations One dimension array:
+-----------------------------------------
+Declaring :
+    int[] arr = new int[5]; OR,
+    int arr[] = {1,2,3,4,5};
+
+Insert : arr[4] = 50;
+Traversing : use a for loop
+....
+- Check code for implementation -
+
+- Common Operations Two dimension array:
+-----------------------------------------
+Declaring :
+    int[][] arr = new int[2][3];
+
+Traversing:
+{
+loop row = 0
+    loop col = 0
+        arr[row][col];
+}
+
+When to use Array
+-------------------
+- Whenever need to store multiple similar type of data
+- Whenever randomly access
+
+DONT USE ARRAY :
+- if non similar data
+- if you don't know how many integers to save
+
+Practical use:
+---------------
+    Dynamic programming : compromise on space complexity for
+    time complexity
+
+    Hash Tables : to implement hash tables
+-------------------------------------------------------------------------------------------
+Linked List
+-------------
+- Each element is a separate object
+- Each element (node) refers to next node
+- IT IS VARIABLE SIZE
+
+          Array             Vs          Linked List
+ Entire array is an object           Separate objects (nodes)
+        Fixed Size                      Variable size
+    Need to specify index      Random access (always gotta travers from beg)
+
+Components of Linked List:
+---------------------------
+Node : Data and reference
+Head : Reference to first node in the list
+Tail : Last node
+
+Types of Linked Lists:
+-----------------------
+- Single
+- Circular Single - the last node points to the first node
+- Double
+- Circular Double - tail.next = head
+                    head.prev = tail
+
+How is LinkedList stored in memory :
+-------------------------------------
+In array it's a contiguous block but in linked list
+the nodes are spread throughout the memory.
+
+                Implementation :
+            ------------------------
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

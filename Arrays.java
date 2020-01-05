@@ -1,39 +1,7 @@
 import java.util.*;
 
 public class Arrays {
-    public static void main(String[] args) {
-        System.out.println ("Array Questions");
-        Scanner scanner = new Scanner(System.in);  // Create a Scanner object
-        System.out.println("Which problem would you like to demo: ");
-        String problem = scanner.nextLine();
 
-        switch(problem) {
-            case "two number sum":
-                int[] result1 = twoNumberSum(new int[]{ 3,5,-4,8,11,1,-1,6 }, 10);
-                for (int i: result1) {
-                    System.out.println (i);
-                }
-                break;
-            case "three number sum":
-                List<Integer[]> result2 = threeNumberSum(new int[]{12,3,1,2,-6,5,-8,6}, 0);
-                for (Integer[] i: result2) {
-                    for (Integer j: i) {
-                        System.out.print (j);
-                    }
-                }
-                System.out.println();
-                break;
-            case "subarray sort":
-                int[] result3 = subarraySort(new int[]{1,2,4,7,10,11,7,12,6,7,16,18,19});
-                for (int i: result3) {
-                    System.out.println (i);
-                }
-                break;
-            default:
-                System.out.println ("Sorry no match");
-        }
-
-    }
     /*  Takes in an array [1,2,3,4,5,6] and targetSum = 7
         Raturns an array filled with ints that add
         up to the target sum ( [3,4] ).
@@ -264,4 +232,58 @@ public class Arrays {
           return new int[]{1,2};
 
       }
+
+      /*
+      Given an array of numbers move all the 0's to the end
+      Algo Description:
+      Create an index that starts from 0
+      Iterate through the array whenever you find a number
+      thats no equal to 0, simply move that number to the
+      index's position, and the increase index + 1;
+      at the and loop from index -> arr.length,
+      and make each arr[i] = 0;
+      */
+      public void moveZeroes(int[] nums) {
+        int index = 0;
+        for (int i=0; i < nums.length; i++) {
+              if(nums[i] != 0) {
+                  nums[index++] = nums[i]; // If num not zero
+              }
+          }
+
+          for (int i= index; i < nums.length; i++) {
+              nums[i] = 0;
+          }
+      }
+
+      /*
+      Given an array of integers, return all the numbers
+      that are unique
+
+      @param : array of integers nums
+      @arg : {1,3,5,5,6,6,7,8,10,10}
+      */
+
+      public static List<Integer> getUniqueNums(int[] nums) {
+          Map<Integer, Boolean> existingNums = new HashMap();
+
+          for (int i=0; i<nums.length; i++) {
+              Integer key = new Integer(nums[i]);
+              if (!(existingNums.containsKey(key))){
+                  existingNums.put(key, true);
+                  continue;
+              }
+              existingNums.remove(key);
+          }
+          return new ArrayList<Integer>(existingNums.keySet());
+      }
+
+      public static void main(String[] args) {
+          List<Integer> list = getUniqueNums(new int[] {1,2,3, 3, 5, 6, 5, 10, 10, 9, 56, 2});
+
+          for (Integer i: list) {
+              System.out.println(i);
+          }
+      }
+
 }
